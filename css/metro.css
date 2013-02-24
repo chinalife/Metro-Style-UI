@@ -1,0 +1,45 @@
+/*
+ * Metro-Style-UI CSS
+ * Copyright 2013 China Life
+ *
+*/
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: ""
+};
+
+.clearfix:after {
+    clear: both;
+};
+
+.selected {
+  border: 4px #2d89ef solid;
+}
+
+.selected:after {
+  width: 0;
+  height: 0;
+  border-top: 40px solid #2d89ef;
+  border-left: 40px solid transparent;
+  position: absolute;
+  display: block;
+  right: 0;
+  content: ".";
+  top: 0;
+  z-index: 1001;
+}
+
+.selected:before {
+  position: absolute;
+  content: "\e08a";
+  color: #fff;
+  right: 4px;
+  font-family: iconFont;
+  z-index: 1002;
+}
+
