@@ -3,19 +3,37 @@
  * Copyright 2013 China Life
  *
 */
+/* 清理浮动 */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 
 .clearfix:before,
 .clearfix:after {
-    display: table;
-    content: ""
+  display: table;
+  content: ""
 };
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 };
+
+/* 让内容以 border-box 显示 */
+.border-box{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 .selected {
   border: 4px #2d89ef solid;
@@ -43,3 +61,288 @@
   z-index: 1002;
 }
 
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/;
+  
+  Licensed under GPL and MIT.
+*/
+body {min-width: 960px;}
+
+/* layout container for the grid */
+.container{
+  margin-left:auto;
+  margin-right:auto;
+  width:1000px;
+  zoom:1;
+}
+.span{
+  display:inline;
+  float:left;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.span12 {
+  width: 940px;
+}
+
+.span11 {
+  width: 860px;
+}
+
+.span10 {
+  width: 780px;
+}
+
+.span9 {
+  width: 700px;
+}
+
+.span8 {
+  width: 620px;
+}
+
+.span7 {
+  width: 540px;
+}
+
+.span6 {
+  width: 460px;
+}
+
+.span5 {
+  width: 380px;
+}
+
+.span4 {
+  width: 300px;
+}
+
+.span3 {
+  width: 220px;
+}
+
+.span2 {
+  width: 140px;
+}
+
+.span1 {
+  width: 60px;
+}
+
+/*
+ Metro button
+*/
+.btn {
+  display: inline-block;
+  *display: inline;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 0;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  padding: 4px 10px;
+  *zoom: 1;
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.btn:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn:first-child {
+  *margin-left: 0;
+}
+
+.btn:disabled,
+.btn.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #59008C;
+  border-color: #59008C;
+  color: #FFF;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+   background-color: #781096;
+   border-color: #781096;
+   color: #CCC;
+}
+
+.btn-warning {
+   background-color: #faa732;
+   border-color: #faa732;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+}
+
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+   background-color: #f89406;
+   border-color: #f89406;
+}
+
+.btn-danger {
+   background-color: #da4f49;
+   border-color: #da4f49;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+}
+
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+   background-color: #bd362f;
+   border-color: #bd362f;
+}
+
+.btn-success {
+   background-color: #5bb75b;
+   border-color: #5bb75b;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+   background-color: #51a351;
+   border-color: #51a351;
+}
+
+.btn-info {
+   background-color: #49afcd;
+   border-color: #49afcd;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+}
+
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+   background-color: #2f96b4;
+   border-color: #2f96b4;
+}
+
+.btn-inverse {
+   background-color: #414141;
+   border-color: #414141;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+}
+
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+   background-color: #222222;
+   border-color: #222222;
+}
+
+/* Alerts */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-shadow: none;
+  background-color: #D44A26;
+  border-color: #D44A26;
+  color: #FFF;
+  position: relative;
+}
+
+.close {
+  float: right;
+  font-family: Impact!important;
+  _font-family: Tahoma!important;
+  font-size: 20px;
+  _font-size: 16px;
+  font-weight: blod;
+  line-height: 18px;
+  color: black;
+  text-shadow: 0 1px 0 white;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.alert .close {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+}
+
+.close:hover {
+  color: black;
+  text-decoration: none;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  cursor: pointer;
+}
+
+.alert-success {
+  color: #FFFFFF;
+  background-color: #01A31C;
+  border-color: #01A31C;
+}
+
+.alert-danger,
+.alert-error {
+  color: #FFFFFF;
+  background-color: #BC1C48;
+  border-color: #BC1C48;
+}
+
+.alert-info {
+  color: #FFFFFF;
+  background-color: #2D89F0;
+  border-color: #2D89F0 ;
+}
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
