@@ -1,0 +1,440 @@
+#sidebar > ul {
+  list-style: none;
+  border-top: 1px solid #393939;
+  border-bottom: 1px solid #4E4E4E;
+}
+#sidebar > ul > li {
+  display: block;
+  position: relative;
+  border-top: 1px solid #4E4E4E;
+  border-bottom: 1px solid #393939;
+}
+#sidebar > ul > li > a {
+  padding: 10px 0 10px 15px;
+  display: block;
+  /*color: #AAA;*/
+  text-decoration: none;
+}
+
+#sidebar > ul ul {
+  display: none;
+  border-top: 1px solid #4E4E4E;
+  background-color: #2A2A2A;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
+  list-style: none;
+}
+#sidebar > ul ul li a{
+  padding: 10px 0 10px 25px;
+  display: block;
+  color: #777777;
+}
+
+.doc-nav {
+  position: relative;
+  background: #DEF;
+  border: 1px solid #888;
+  border-width: 1px 0;
+  width: 100%;
+}
+
+.doc-nav li {
+  text-align: center;
+  list-style: none;
+}
+.button {
+  width: 160px;
+  float: left;
+}
+.parent {position: relative;}
+
+.floatfix {margin-right: -3px;}
+
+.dropdown { /* rules for dropdown div */
+  width: 250px;
+  position: absolute;
+  left: -3000px;
+  top: auto; /* puts dropdowns directly under top nav */
+  text-align: left; /* needed because IE misapplies text centering to boxes */
+  background: url(../img/bgfix.gif);
+}
+
+.dropdown div {
+  width: 220px;
+  position: absolute;
+  left: -3000px;
+  top: 0;
+  background: url(../img/bgfix.gif);
+  text-align: left; /* needed because IE misapplies text centering to boxes */
+}
+.dropdown ul {
+  width: 189px; /* tweaked so that dropdowns appear to "line up" with top links */
+  margin: 0 30px 30px 30px; /* creates "sticky hovering" zones for dropdowns */
+  border: 1px solid #888;
+  border-width: 1px 1px 0;
+} /* borders sides and top of the dropdowns and flyouts; links provide the bottom border */
+
+.one {
+  z-index: 10;
+}
+
+.doc-nav a {
+  display: block;
+  color: #800;
+  font-weight: bold;
+  font-size: .9em;
+  text-decoration: none;
+  padding: 6px 0 5px;
+  border-right: 1px solid #888;
+}
+
+
+
+.dropdown div ul {margin: 30px 30px 30px 0;} /* creates "sticky hovering" zones for flyouts */
+
+.four .dropdown ul {width: 190px;} /* modifies width for rightmost "visible" dropdown (tweak) */
+
+.four .dropdown div ul {margin: 30px 0 30px 30px; position: relative;} /* rule reversal for "visible" right drop flyouts */
+.doc-nav li {text-align: center;}
+.four a {border-right: 0;} /* kills right border on last top link */
+
+.doc-nav ul ul a {
+  color: #fff;
+  border-right: 0; /* negates right border for dropdowns and flyouts */
+  border-bottom: 1px solid #888;  /* borders the bottoms of the dropdown and flyout links */
+}
+.dropdown li {
+  position: relative;
+  vertical-align: bottom; /* IE5/win bugfix */
+}
+
+.doc-nav a {
+  display: block;
+  color: #800;
+  font-weight: bold;
+  font-size: .9em;
+  text-decoration: none;
+  padding: 6px 0 5px;
+  border-right: 1px solid #888;  /* makes the dividers between the top nav links */
+}
+.parent:hover {background-image: url(../img/bgfix.gif);}
+/* this hover calls a transparent GIF only to defeat the IE failed hover bug. Any
+background change on hovering div.parent will make IE obey and display the dropdown.
+While the call itself will fix the bug, make sure you actually call a real image
+file so that your site error logs will not fill with failed image calls. */
+
+.parent:hover div.dropdown {left: -31px;} /* hover rule for dropdowns */
+/* extra pixel makes dropdowns "line up" with top links */
+
+.dropdown li:hover div { /* hover rule for flyouts */
+  left: 180px; /* this value controls the amount of flyout "overlap" */
+  top: -26px; /* this value controls the amount of flyout vertical offset */
+}
+
+.four li:hover div { /* reversed flyout rules for rightmost drop flyouts */
+  left: -210px;
+  top: -26px;
+}
+
+.doc-nav div.mini-zone { /* special hover zone that covers the "danger corner" */
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  font-size: 1px;
+  left: -3000px;
+  bottom: -15px;
+  top: auto;
+  background: url(../img/bgfix.gif);
+}
+
+.doc-nav .dropdown li:hover div.mini-zone { /* hover rule for mini-zones */
+  left: auto;
+  right: 8px;
+  top: auto;
+}
+
+.doc-nav .four li:hover div.mini-zone { /* reversed hover rule for rightmost drop mini-zones */
+  left: 8px;
+}
+
+.dropdown li:hover {background: #235;} /* hover color effect on dropdown links */
+
+.dropdown div li:hover {background: #ff7;} /* hover color effect on flyout links */
+
+
+/*XXXXXXXXXXX Primary dropdown backgrounds XXXXXXXXXX*/
+
+.one ul {background: #d79b00;}
+.two ul {background: #459;}
+.three ul {background: #4a3;}
+.four ul {background: #790000;}
+.dropdown div ul {background: #eda;} /* colors BG of flyouts */
+.dropdown div ul a {color: #400;} /* colors text of  flyouts */
+
+
+/*XXXXXXXXXX z-index rules for top nav XXXXXXXXXXX*/
+
+.one {z-index: 10;}
+.two {z-index: 20;}
+.three {z-index: 30;}
+.four {z-index: 40;}
+.four:hover {z-index: 20;}
+/* this last is a special trick that reverses the stacking order of the rightmost
+top link when it or its children are hovered. This, and the previous rules work
+together so that when a user is on the top link of any flyout, they can move
+vertically to the top link directly above and not have the sticky hoivering zone
+on the flyout get in the way of hovering that top link. */
+/*XXXXXXXXXXX Special fixes XXXXXXXXXXX*/
+
+/* This is to hide the following from IE/Mac. \*/
+* html .button .dropdown li {
+  height: 1%;
+  margin-left: -16px;
+  mar\gin-left: 0;
+}
+/* */
+
+* html .doc-nav a
+{height: 1%;}
+
+
+.brclear { /* Use a break with this class to clear float containers */
+  clear:both;
+  height:0;
+  margin:0;
+  font-size: 1px;
+  line-height: 0;
+}
+
+
+
+
+a:link{
+  text-decoration: none;
+}
+
+
+/* Actual navmenu CSS */
+#nav{
+  background: #111 repeat-x top left;
+  height: 37px;
+}
+
+#nav, #nav li{
+  display: block;
+  list-style: none;
+  position: relative;
+  z-index: 82;
+}
+#nav > li{
+  float: left;
+  z-index: 82;
+}
+#nav > li:hover{
+  background: #222 repeat-x top left;
+}
+
+#nav a{
+  display: block;
+  line-height: 37px;
+  padding: 0 0.5em;
+  z-index: 82;
+  position: relative;
+  color: #ccc;
+}
+#nav a:hover{
+  color: #fff;
+}
+
+/* Subnav Menu */
+#nav .submenu{
+  display: none;
+  position: absolute;
+  z-index: 80;
+  background: repeat-x left top #353535;
+  border: 1px solid #000;
+
+  left: 0px;
+  top: 37px;
+  min-width: 100%;
+
+  -o-box-shadow:		2px 2px 3px #000;
+  -icab-box-shadow:	2px 2px 3px #000;
+  -khtml-box-shadow:	2px 2px 3px #000;
+  -moz-box-shadow:	2px 2px 3px #000;
+  -webkit-box-shadow:	2px 2px 3px #000;
+  box-shadow:			2px 2px 3px #000;
+}
+#nav .submenu li{
+  display: block;
+  line-height: 27px !important;
+}
+#nav .submenu li:hover{
+  background: #444 repeat-x top left;
+}
+
+#nav .submenu a{
+  display: block;
+  line-height: 27px !important;
+  white-space: nowrap;
+}
+
+#nav > li:hover .submenu{
+  display: block;
+}
+/* Hide next level of subnavigation */
+#nav > li:hover > .submenu .submenu{
+  display: none;
+}
+
+
+#nav .padding{
+  display: block;
+  position: absolute;
+  z-index: 78;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0px;
+  left: 0px;
+  background: none !important;
+}
+/* Padding amount for first-level dropdown */
+#nav > li > .submenu > .padding{
+  width: 160%;
+  left: -30%;
+  height: 140%;
+}
+
+#nav .buffer{
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 100%;
+
+  width: 100%;
+  height: 100%;
+  background: none !important;
+}
+
+#nav .shadow{
+  display: none !important;
+}
+
+/*	Third-level Subnavigation */
+#nav .submenu .submenu{
+  position: absolute;
+  left: 100%;
+  top: -1px;
+}
+#nav .submenu .submenu .padding{
+  width: 150%;
+  top: -35%;
+  height: 170%;
+}
+/*	Show subnavigation */
+#nav > li:hover .submenu li:hover > .submenu{
+  display: block;
+  z-index: 70 !important;
+}
+
+
+
+
+/* CSS3 Transition Handling */
+#nav.use-trans li > .submenu{
+  opacity: 0;
+  display: block !important;
+  left: -9999px !important;
+
+  -moz-transition:		0.2s opacity ease-in, 0s left linear 0.22s;
+  -webkit-transition:		0.2s opacity ease-in, 0s left linear 0.22s;
+  -khtml-transition:		0.2s opacity ease-in, 0s left linear 0.22s;
+  -icab-transition:		0.2s opacity ease-in, 0s left linear 0.22s;
+  -ms-transition:			0.2s opacity ease-in, 0s left linear 0.22s;
+  -o-transition:			0.2s opacity ease-in, 0s left linear 0.22s;
+  transition:				0.2s opacity ease-in, 0s left linear 0.22s;
+}
+/* Hide next level of subnavigation */
+#nav.use-trans > li:hover > .submenu .submenu{
+  display: block !important;
+  left: -9999px !important;
+}
+
+
+/* Hover */
+#nav.use-trans > li:hover > .submenu,
+#nav.use-trans > li > .submenu li:hover > .submenu{
+  opacity: 1 !important;
+
+  -moz-transition-delay:		0s;
+  -webkit-transition-delay:	0s;
+  -khtml-transition-delay:	0s;
+  -icab-transition-delay:		0s;
+  -ms-transition-delay:		0s;
+  -o-transition-delay:		0s;
+  transition-delay:			0s;
+}
+#nav.use-trans > li:hover > .submenu				{	left: 0px !important;	}
+#nav.use-trans > li > .submenu li:hover > .submenu	{	left: 100% !important;	}
+
+
+/*	Running Border on Subnavigation
+-	Stable implementation requires an additional span tag at the end of each anchor tag.
+*/
+#nav ul a{
+  position: relative;
+}
+#nav ul a span{
+  background-color: #5a5a5a;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+}
+
+
+
+/*	Outlining Rules for Debugging */
+.padding	{	outline-color: red;		}
+.buffer		{	outline-color: blue;	}
+
+.showbounds .padding,
+.showbounds .buffer{
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+
+
+/* Theming can go here */
+#nav{
+  outline: 1px solid #111;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #404040), color-stop(100%, #282828));
+  background: -webkit-linear-gradient(#404040, #282828);
+  background: -moz-linear-gradient(#404040, #282828);
+  background: -o-linear-gradient(#404040, #282828);
+  background: linear-gradient(#404040, #282828);
+}
+#nav > li{
+  border-left: 1px solid #333;
+  border-right: 1px solid #222;
+}
+#nav > li:first-child{
+  border-left: 0 !important;
+}
+
+#nav > li:hover{
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1a1a1a), color-stop(100%, #282828));
+  background: -webkit-linear-gradient(#141414, #282828);
+  background: -moz-linear-gradient(#141414, #282828);
+  background: -o-linear-gradient(#141414, #282828);
+  background: linear-gradient(#141414, #282828);
+}
+
+#nav .submenu li{
+  background-image: -webkit-linear-gradient(#292929, #242424);
+}

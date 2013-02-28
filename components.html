@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/metro.css">
+    <link rel="stylesheet" href="css/docs.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
 
@@ -21,30 +22,38 @@
 
     <!-- Add your site or application content here -->
     <!-- Navbar -->
-    <div class="navbar">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Metro</a>
-          <div class="navbar-collapse collapse">
-            <ul class="nav">
-              <li class><a href="#">Home</a></li>
-              <li class><a href="#">Base</a></li>
-              <li class><a href="#">Components</a></li>
-              <li class><a href="#">Extra</a></li>
-              <li class><a href="#">Map</a></li>
-            </ul>
-          </div>
+          <a class="brand" href="#">Metro Style</a>
+          <ul class="nav pull-right">
+            <li class><a href="#">Home</a></li>
+            <li class><a href="#">Base</a></li>
+            <li class><a href="#">Components</a></li>
+            <li class><a href="#">Extra</a></li>
+            <li class><a href="#">Map</a></li>
+          </ul>
         </div>
       </div>
     </div>
     <!-- Subhead -->
     <div class="container">
-      <div class="span span3 docs-sidebar">
+      <div id="sidebar" class="span span3 docs-sidebar">
         <ul class="nav nav-list docs-sidenav">
-          <li>Buttons</li>
-          <li>Pagination</li>
-          <li>Navs</li>
-          <li>Progress</li>
+          <li><a href="#"><i class="icon-home"></i>Dashboard</a></li>
+          <li class="submenu">
+            <a href="#"><i class="icon-list"></i>Form elements</a>
+            <ul>
+              <li><a href="#">Common elements</a></li>
+              <li><a href="#">Validation</a></li>
+              <li><a href="#">Wizard</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="icon-heart"></i>Buttons & icons</a></li>
+          <li><a href="#"><i class="icon-pencil"></i>Interface elements</a></li>
+          <li><a href="#"><i class="icon-th"></i>Tables</a>
+          <li><a href="#"><i class="icon-wrench"></i>Widgets</a></li>
+          <li><a href="#"><i class="icon-star"></i>Charts & graphs</a></li>
         </ul>
       </div>
       <div class="span span9">
@@ -55,13 +64,13 @@
           </div>
           <h2>Default buttons</h2>
           <div class="btn-group">
-            <button type="button" class="btn">Default</button>
-            <button type="button" class="btn btn-primary">Primary</button>
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-success">Success</button>
-            <button type="button" class="btn btn-warning">Warning</button>
-            <button type="button" class="btn btn-danger">Danger</button>
-            <button type="button" class="btn btn-inverse">Inverse</button>
+            <button type="button" class="btn">Default button</button>
+            <button type="button" class="btn btn-primary">Primary button</button>
+            <button type="button" class="btn btn-info">Info button</button>
+            <button type="button" class="btn btn-success">Success button</button>
+            <button type="button" class="btn btn-warning">Warning button</button>
+            <button type="button" class="btn btn-danger">Danger button</button>
+            <button type="button" class="btn btn-inverse">Inverse button</button>
           </div>
         </section>
 
@@ -120,17 +129,451 @@
           </div>
           <h2>Default Tabs</h2>
           <div class="bs-docs-example">
-        <ul class="nav nav-tabs">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
-        </ul>
-      </div>
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active">
+                <a href="#"><i class="icon-home"></i>Home</a>
+              </li>
+              <li><a href="#"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+              </div>
+            </div>
+            </div>
         </section>
+        <section id="navigation">
+        <div class="page-header">
+          <h1>Nav</h1>
+        </div>
+        <h2>Default Nav</h2>
+        <div class="doc-nav">
+        <ul>
+        <li class="button">
+          <div class="parent one">
+            <a href="#">First Link</a>
+            <div class="dropdown">
+              <ul>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink One</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">One.One</a></li>
+                      <li><a href="#">One.Two</a></li>
+                      <li><a href="#">One.Three</a></li>
+                      <li><a href="#">One.Four</a></li>
+                      <li><a href="#">One.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 9;">
+                  <a href="#">Sublink Two</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Two.One</a></li>
+                      <li><a href="#">Two.Two</a></li>
+                      <li><a href="#">Two.Three</a></li>
+                      <li><a href="#">Two.Four</a></li>
+                      <li><a href="#">Two.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 8;">
+                  <a href="#">Sublink Three</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Three.One</a></li>
+                      <li><a href="#">Three.Two</a></li>
+                      <li><a href="#">Three.Three</a></li>
+                      <li><a href="#">Three.Four</a></li>
+                      <li><a href="#">Three.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Four</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Four.One</a></li>
+                      <li><a href="#">Four.Two</a></li>
+                      <li><a href="#">Four.Three</a></li>
+                      <li><a href="#">Four.Four</a></li>
+                      <li><a href="#">Four.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Five</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Five.One</a></li>
+                      <li><a href="#">Five.Two</a></li>
+                      <li><a href="#">Five.Three</a></li>
+                      <li><a href="#">Five.Four</a></li>
+                      <li><a href="#">Five.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="button">
+          <div class="parent two">
+            <a href="#">Second Link</a>
+            <div class="dropdown">
+              <ul>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink One</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">One.One</a></li>
+                      <li><a href="#">One.Two</a></li>
+                      <li><a href="#">One.Three</a></li>
+                      <li><a href="#">One.Four</a></li>
+                      <li><a href="#">One.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 9;">
+                  <a href="#">Sublink Two</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Two.One</a></li>
+                      <li><a href="#">Two.Two</a></li>
+                      <li><a href="#">Two.Three</a></li>
+                      <li><a href="#">Two.Four</a></li>
+                      <li><a href="#">Two.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 8;">
+                  <a href="#">Sublink Three</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Three.One</a></li>
+                      <li><a href="#">Three.Two</a></li>
+                      <li><a href="#">Three.Three</a></li>
+                      <li><a href="#">Three.Four</a></li>
+                      <li><a href="#">Three.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Four</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Four.One</a></li>
+                      <li><a href="#">Four.Two</a></li>
+                      <li><a href="#">Four.Three</a></li>
+                      <li><a href="#">Four.Four</a></li>
+                      <li><a href="#">Four.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Five</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Five.One</a></li>
+                      <li><a href="#">Five.Two</a></li>
+                      <li><a href="#">Five.Three</a></li>
+                      <li><a href="#">Five.Four</a></li>
+                      <li><a href="#">Five.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="button">
+          <div class="parent three">
+            <a href="#">Third Link</a>
+            <div class="dropdown">
+              <ul>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink One</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">One.One</a></li>
+                      <li><a href="#">One.Two</a></li>
+                      <li><a href="#">One.Three</a></li>
+                      <li><a href="#">One.Four</a></li>
+                      <li><a href="#">One.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 9;">
+                  <a href="#">Sublink Two</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Two.One</a></li>
+                      <li><a href="#">Two.Two</a></li>
+                      <li><a href="#">Two.Three</a></li>
+                      <li><a href="#">Two.Four</a></li>
+                      <li><a href="#">Two.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 8;">
+                  <a href="#">Sublink Three</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Three.One</a></li>
+                      <li><a href="#">Three.Two</a></li>
+                      <li><a href="#">Three.Three</a></li>
+                      <li><a href="#">Three.Four</a></li>
+                      <li><a href="#">Three.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Four</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Four.One</a></li>
+                      <li><a href="#">Four.Two</a></li>
+                      <li><a href="#">Four.Three</a></li>
+                      <li><a href="#">Four.Four</a></li>
+                      <li><a href="#">Four.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Five</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Five.One</a></li>
+                      <li><a href="#">Five.Two</a></li>
+                      <li><a href="#">Five.Three</a></li>
+                      <li><a href="#">Five.Four</a></li>
+                      <li><a href="#">Five.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="button floatfix">
+          <div class="parent four">
+            <a href="#">Forth Link</a>
+            <div class="dropdown">
+              <ul>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink One</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">One.One</a></li>
+                      <li><a href="#">One.Two</a></li>
+                      <li><a href="#">One.Three</a></li>
+                      <li><a href="#">One.Four</a></li>
+                      <li><a href="#">One.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 9;">
+                  <a href="#">Sublink Two</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Two.One</a></li>
+                      <li><a href="#">Two.Two</a></li>
+                      <li><a href="#">Two.Three</a></li>
+                      <li><a href="#">Two.Four</a></li>
+                      <li><a href="#">Two.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 8;">
+                  <a href="#">Sublink Three</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Three.One</a></li>
+                      <li><a href="#">Three.Two</a></li>
+                      <li><a href="#">Three.Three</a></li>
+                      <li><a href="#">Three.Four</a></li>
+                      <li><a href="#">Three.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Four</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Four.One</a></li>
+                      <li><a href="#">Four.Two</a></li>
+                      <li><a href="#">Four.Three</a></li>
+                      <li><a href="#">Four.Four</a></li>
+                      <li><a href="#">Four.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li style="z-index: 10;">
+                  <a href="#">Sublink Five</a>
+                  <div class="mini-zone"></div>
+                  <div>
+                    <ul>
+                      <li><a href="#">Five.One</a></li>
+                      <li><a href="#">Five.Two</a></li>
+                      <li><a href="#">Five.Three</a></li>
+                      <li><a href="#">Five.Four</a></li>
+                      <li><a href="#">Five.Five</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        </ul>
+
+        <br class="brclear">
+        </div>
+        </section>
+
+        <ul id="nav" class="use-trans">
+          <li>
+            <a href="#">Voluptate Atque</a>
+            <div class="submenu">
+              <ul>
+                <li><a href="#">Quo voluptas nulla pariatur?<span></span></a></li>
+                <li><a href="#">Dignissimos Ducimus<span></span></a></li>
+                <li><a href="#">Qui blanditiis<span></span></a></li>
+              </ul>
+              <div class="padding"></div>
+              <div class="shadow"></div>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">Corrupti Quos Dolores</a>
+            <div class="submenu">
+              <ul>
+                <li><a href="#">Qui Dolorem<span></span></a></li>
+                <li><a href="#">Ipsum Quia<span></span></a></li>
+                <li><a href="#">Dolor Sit<span></span></a></li>
+                <li><a href="#">Tempore<span></span></a></li>
+                <li><a href="#">Qui Ratione<span></span></a></li>
+                <li>
+                  <a href="#">Amet, nam libero! &nbsp;&nbsp;&nbsp;&raquo;<span></span></a>
+                  <div class="submenu">
+                    <ul>
+                      <li><a href="#">Qui Dolorem<span></span></a></li>
+                      <li><a href="#">Ipsum Quia<span></span></a></li>
+                      <li><a href="#">Dolor Sit<span></span></a></li>
+                      <li><a href="#">Qui Dolorem<span></span></a></li>
+                      <li><a href="#">Ipsum Quia<span></span></a></li>
+                      <li><a href="#">Dolor Sit<span></span></a></li>
+                      <li><a href="#">Qui Dolorem<span></span></a></li>
+                      <li><a href="#">Ipsum Quia<span></span></a></li>
+                      <li><a href="#">Dolor Sit<span></span></a></li>
+                      <li>
+                        <a href="#">Amet, nam libero! Libero, libero, LIBERO!! &nbsp;&nbsp;&nbsp;&raquo;<span></span></a>
+
+                        <div class="submenu">
+                          <ul>
+                            <li><a href="#">Dude, what the fuck is "Libero"?<span></span></a></li>
+                            <li><a href="#">Ipsum Quia<span></span></a></li>
+                            <li><a href="#">Dolor Sit<span></span></a></li>
+                            <li><a href="#">Qui Dolorem<span></span></a></li>
+                            <li><a href="#">Ipsum Quia<span></span></a></li>
+                            <li><a href="#">Dolor Sit<span></span></a></li>
+                          </ul>
+
+                          <div class="padding"></div>
+                          <div class="shadow"></div>
+                          <div class="buffer"></div>
+                        </div>
+
+                      </li>
+                      <li><a href="#">Tempore<span></span></a></li>
+                      <li><a href="#">Qui Ratione<span></span></a></li>
+                    </ul>
+
+                    <div class="padding"></div>
+                    <div class="shadow"></div>
+                    <div class="buffer"></div>
+                  </div>
+
+                </li>
+              </ul>
+
+              <div class="padding"></div>
+              <div class="shadow"></div>
+            </div>
+          </li>
+
+
+          <li>
+            <a href="#">Et Quas Molestias<span></span></a>
+            <div class="submenu">
+              <ul>
+                <li><a href="#">Voluptatem sequi nesciunt<span></span></a></li>
+                <li><a href="#">Dicta sunt explicabo.<span></span></a></li>
+                <li><a href="#">Sed Quia Non<span></span></a></li>
+                <li><a href="#">Numquam Eius<span></span></a></li>
+                <li><a href="#">Modi cum soluta<span></span></a></li>
+                <li><a href="#">Nobis est<span></span></a></li>
+              </ul>
+
+              <div class="padding"></div>
+              <div class="shadow"></div>
+            </div>
+          </li>
+
+
+          <li>
+            <a href="#">Iste natus error sit voluptatem.</a>
+            <div class="submenu">
+              <ul>
+                <li><a href="#">Eligendi Optio<span></span></a></li>
+                <li><a href="#">Atque Corrupti<span></span></a></li>
+                <li><a href="#">Quos Dolores<span></span></a></li>
+                <li><a href="#">Quas Molestias.<span></span></a></li>
+                <li><a href="#">Libero Tempore<span></span></a></li>
+                <li><a href="#">Dignissimos Ducimus<span></span></a></li>
+              </ul>
+
+              <div class="padding"></div>
+              <div class="shadow"></div>
+            </div>
+          </li>
+        </ul>
+
+
+        <!-- The following segment of code isn't necessary for the nav-menu: it just provides a control for revealing the hidden CSS boundaries to the user. Just for the sake of easier visualisation. -->
+        <div id="controls" style="margin: 3em 5em 0 0; float: right; position: fixed; bottom: .3em; right: .3em">
+          <form action="./" method="get" id="controls-form">
+            <fieldset style="background-color: #000; border: 1px solid #666; color: #fff;">
+              <label for="toggle-class" style="font-weight: bold; padding: .5em 1em; display: block; cursor: pointer;">Show Boundaries (S): <input type="checkbox" id="toggle-class" name="toggle-class" value="true" style="cursor: pointer" /></label>
+            </fieldset>
+          </form>
+        </div>
       </div>
+
     </div>
+
     <!-- Footer -->
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins.js"></script>
